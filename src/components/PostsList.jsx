@@ -4,7 +4,7 @@ import classes from "./PostsList.module.css";
 import Modal from "./Modal";
 import { useState } from "react";
 
-function PostsList(props) {
+function PostsList({hideModalHandler, renderModal}) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
@@ -19,9 +19,9 @@ function PostsList(props) {
   return (
     <>
       {
-        props.renderModal && 
-        <Modal onHideModal={props.hideModalHandler} >
-          <NewPost onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler} />
+        renderModal && 
+        <Modal onHideModal={hideModalHandler} >
+          <NewPost onHideModal={hideModalHandler} onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler} />
         </Modal>
       }
       <ul className={classes.posts}>
