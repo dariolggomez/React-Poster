@@ -4,10 +4,9 @@ import classes from "./PostsList.module.css";
 import Modal from "./Modal";
 import { useState } from "react";
 
-function PostsList() {
+function PostsList(props) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
-  const [renderModal, setRenderModal] = useState(true);
 
   function changeBodyHandler(event) {
     setEnteredBody(event.target.value);
@@ -17,15 +16,11 @@ function PostsList() {
     setEnteredAuthor(event.target.value);
   }
 
-  function hideModalHandler() {
-    setRenderModal(false);
-  }
-
   return (
     <>
       {
-        renderModal && 
-        <Modal onHideModal={hideModalHandler} >
+        props.renderModal && 
+        <Modal onHideModal={props.hideModalHandler} >
           <NewPost onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler} />
         </Modal>
       }
