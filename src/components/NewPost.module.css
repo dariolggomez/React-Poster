@@ -1,5 +1,5 @@
 .form {
-    background-color: #6233b9;
+    background-color: #4e4be6;
     padding: 1rem;
     width: 20rem;
     margin: 2rem auto;
@@ -10,7 +10,7 @@
 .form label {
     display: block;
     margin-bottom: 0.5rem; 
-    color: #eadbfb;
+    color: #dbeafb;
     font-weight: bold;
     font-size: 1rem; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@
     border-radius: 6px;
     resize: none;
     border: none;
-    background-color: #c4a9e4;
+    background-color: #e1e8ff;
     color: #28262c;
     overflow-y: auto;
 }
@@ -72,26 +72,26 @@
 }
 
 .form textarea::-webkit-scrollbar-track {
-    background: #c4a9e4;
+    background: #e1e8ff;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .form textarea::-webkit-scrollbar-thumb {
-    background-color: #9178d1;
+    background-color: #809fff;
     border-radius: 8px;
     cursor: pointer;
 }
 
 .form input:hover,
 .form textarea:hover {
-    background-color: #ca9fff;
-    border-color: #43209b;
+    background-color: #d4e2ff;
+    border-color: #20419b;
 }
 
 .form input:focus,
 .form textarea:focus {
     outline: none;
-    background-color: #ca9fff;
-    box-shadow: 0px 0px 12px 1px #9a40fb;
+    background-color: #d4e2ff;
+    box-shadow: 0px 0px 10px 1px #57c4ff;
 }
