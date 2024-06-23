@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Post() {
+function Post(props) {
     return (
         <div>
-            <p>Dario</p>
-            <p>First post!</p>
+            <p>{props.author}</p>
+            <p>{props.body}</p>
         </div>
     );
 }
