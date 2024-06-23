@@ -7,6 +7,7 @@ import { useState } from "react";
 function PostsList() {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
+  const [renderModal, setRenderModal] = useState(true);
 
   function changeBodyHandler(event) {
     setEnteredBody(event.target.value);
@@ -16,11 +17,18 @@ function PostsList() {
     setEnteredAuthor(event.target.value);
   }
 
+  function hideModalHandler() {
+    setRenderModal(false);
+  }
+
   return (
     <>
-      <Modal>
-        <NewPost onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler} />
-      </Modal>
+      {
+        renderModal && 
+        <Modal onHideModal={hideModalHandler} >
+          <NewPost onBodyChange={changeBodyHandler} onAuthorChange={changeAuthorHandler} />
+        </Modal>
+      }
       <ul className={classes.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
       </ul>
