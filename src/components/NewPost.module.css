@@ -1,0 +1,97 @@
+.form {
+    background-color: #6233b9;
+    padding: 1rem;
+    width: 20rem;
+    margin: 2rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem; /* Increased margin for better spacing */
+    color: #eadbfb;
+    font-weight: bold;
+    font-size: 1rem; /* Increased font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+    letter-spacing: 0.1em; /* Increased letter spacing for readability */
+    font-family: 'Roboto', sans-serif;
+}
+
+.form input,
+.form textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-size: 1.0rem;
+    font-weight: 500;
+    font-family: 'Arial', sans-serif;
+    padding: 0.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    transition: background-color 0.5s ease, border-color 0.9s ease, box-shadow 0.5s ease;
+    /* Smooth transition for background and border */
+    border-radius: 6px;
+    resize: none;
+    border: none;
+    background-color: #c4a9e4;
+    color: #28262c;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: #9178d1 #ca9fff;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.actions button {
+    cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #34036c;
+    color: #e5d5f7;
+}
+
+.actions button:hover {
+    background-color: #23014a;
+}
+
+.actions button[type='button'] {
+    background-color: transparent;
+}
+
+.actions button[type='button']:hover {
+    color: #d1bee6;
+}
+
+.form textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form textarea::-webkit-scrollbar-track {
+    background: #ca9fff;
+}
+
+.form textarea::-webkit-scrollbar-thumb {
+    background-color: #9178d1;
+    border-radius: 4px;
+}
+
+.form input:hover,
+.form textarea:hover {
+    background-color: #ca9fff;
+    border-color: #43209b;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    background-color: #ca9fff;
+    box-shadow: 0px 0px 12px 1px #9a40fb;
+}
