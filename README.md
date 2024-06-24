@@ -31,6 +31,18 @@ To get a local copy up and running, follow these simple steps:
    ```
 3. Start the development server:
    ```sh
+   npm run dev
+   ```
+4. Clone the backend repository:
+   ```sh
+   git clone https://github.com/dariolggomez/React-Poster-Backend.git
+   ```
+5. Install NPM packages:
+   ```sh
+   npm install
+   ```
+6. Start the backend server:
+   ```sh
    npm start
    ```
 
