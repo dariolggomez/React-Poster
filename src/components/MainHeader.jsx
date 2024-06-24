@@ -1,9 +1,16 @@
 import { MdPostAdd, MdMessage } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 import classes from './MainHeader.module.css';
 
-function MainHeader({ onCreatePost }) {
+function MainHeader() {
+
+  const navigate = useNavigate();
+
+  function onStartCreatingPost(){
+    navigate('/create-post');
+  }
 
   return (
     <header className={classes.header}>
@@ -12,7 +19,7 @@ function MainHeader({ onCreatePost }) {
         React Poster
       </h1>
       <p>
-        <button className={classes.button} onClick={onCreatePost}>
+        <button className={classes.button} onClick={onStartCreatingPost}>
           <MdPostAdd size={18} />
           New Post
         </button>

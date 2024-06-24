@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
 import classes from './NewPost.module.css';
 import Modal from '../components/Modal';
+import { useNavigate } from 'react-router-dom';
 
-function NewPost({ onHideModal }) {
-
+function NewPost() {
+  const navigate = useNavigate();
   function submitHandler(event) {
     event.preventDefault();
     const formData = {
@@ -17,7 +17,10 @@ function NewPost({ onHideModal }) {
         'Content-Type': 'application/json',
       },
     });
-    onHideModal();
+  }
+
+  function onHideModalHandler() {
+    navigate('/');
   }
 
   return (
@@ -33,7 +36,7 @@ function NewPost({ onHideModal }) {
             <input type="text" id="name" required autoComplete='off' />
           </p>
           <p className={classes.actions}>
-            <button onClick={onHideModal} type='button'>Cancel</button>
+            <button onClick={onHideModalHandler} type='button'>Cancel</button>
             <button>Submit</button>
           </p>
         </form>
@@ -41,8 +44,5 @@ function NewPost({ onHideModal }) {
     </>
   );
 }
-NewPost.propTypes = {
-  onHideModal: PropTypes.func.isRequired,
-};
 
 export default NewPost;
