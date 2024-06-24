@@ -60,5 +60,5 @@ Any contributions you make are **greatly appreciated**.
 
 Dario - dariogomez1011@gmail.com
 
-Project Link: [https://github.com/dariolggomez/React-Poster](https://github.com/dariolggomez/React-Poster)
+Project Link: [https://github.com/dariolggomez/React-Poster](https://github.com/dariolggomez/React-Poster)  
 Backend Project Link: [https://github.com/dariolggomez/React-Poster-Backend](https://github.com/dariolggomez/React-Poster-Backend)
