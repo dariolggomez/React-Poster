@@ -1,23 +1,13 @@
+import PropTypes from 'prop-types';
 import classes from './NewPost.module.css';
-import { useState } from 'react';
 
-function NewPost({onHideModal, onSubmitPost}) {
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredAuthor, setEnteredAuthor] = useState('');
-
-  function changeBodyHandler(event) {
-    setEnteredBody(event.target.value);
-  }
-
-  function changeAuthorHandler(event) {
-    setEnteredAuthor(event.target.value);
-  }
+function NewPost({onHideModal}) {
 
   function submitHandler(event) {
     event.preventDefault();
     const formData = {
       body: event.target.body.value,
-      name: event.target.name.value,
+      author: event.target.name.value,
     }
     fetch('http://localhost:8080/posts', {
       method: 'POST',
@@ -26,7 +16,6 @@ function NewPost({onHideModal, onSubmitPost}) {
         'Content-Type': 'application/json',
       },
     });
-    onSubmitPost(formData);
     onHideModal();
   }
 
@@ -34,11 +23,11 @@ function NewPost({onHideModal, onSubmitPost}) {
     <form onSubmit={submitHandler} className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={changeBodyHandler} />
+        <textarea id="body" required rows={3} />
       </p>
       <p>
         <label htmlFor="name">Your name</label>
-        <input type="text" id="name" required onChange={changeAuthorHandler} autoComplete='off' />
+        <input type="text" id="name" required autoComplete='off' />
       </p>
       <p className={classes.actions}>
         <button onClick={onHideModal} type='button'>Cancel</button>
@@ -47,5 +36,8 @@ function NewPost({onHideModal, onSubmitPost}) {
     </form>
   );
 }
+NewPost.propTypes = {
+  onHideModal: PropTypes.func.isRequired,
+};
 
 export default NewPost;
