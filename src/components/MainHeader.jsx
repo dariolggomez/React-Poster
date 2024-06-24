@@ -1,5 +1,4 @@
 import { MdPostAdd, MdMessage } from 'react-icons/md';
-import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
 import classes from './MainHeader.module.css';
@@ -27,9 +26,5 @@ function MainHeader() {
     </header>
   );
 }
-
-MainHeader.propTypes = {
-  onCreatePost: PropTypes.func.isRequired,
-};
 
 export default MainHeader;

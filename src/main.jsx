@@ -6,18 +6,20 @@ import NewPost from './routes/NewPost'
 import RootLayout from './routes/RootLayout'
 import PostsLayout from './routes/PostsLayout'
 import { loader as fetchPosts } from './utils/api_functions'
+import { action as createPost } from './utils/api_functions'
 
 const router = createBrowserRouter([
   {
     path: '/', element: <RootLayout />, children: [
       {
-        path: '/', element: <PostsLayout />, children: [
+        path: '/', element: <PostsLayout />, loader: fetchPosts,
+        children: [
           {
-            path: '/create-post', element: <NewPost />
+            path: '/create-post', element: <NewPost />, action: createPost
           }
-        ], loader: fetchPosts
+        ]
       },
-    ]
+    ],
   },
 ]);
 
