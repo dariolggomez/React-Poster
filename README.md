@@ -1,7 +1,6 @@
 # React Poster
 
 ![](/src/assets/photo_posts.png)  
-![](/src/assets/photo_form.png)
 
 ## Overview
 
