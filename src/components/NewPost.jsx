@@ -1,7 +1,7 @@
 import classes from './NewPost.module.css';
 import { useState } from 'react';
 
-function NewPost({onHideModal}) {
+function NewPost({onHideModal, onSubmitPost}) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
@@ -19,7 +19,7 @@ function NewPost({onHideModal}) {
       body: event.target.body.value,
       name: event.target.name.value,
     }
-    console.log(formData);
+    onSubmitPost(formData);
     onHideModal();
   }
 
