@@ -2,6 +2,8 @@
 
 ## Overview
 
+React Poster is a web application designed for users to effortlessly create and share posts. Built with the powerful React framework, this project leverages modern web technologies to provide a seamless and interactive user experience.
+
 ## Features
 
 - **Easy Post Creation**: Users can quickly create posts with text content.
@@ -44,4 +46,4 @@ Any contributions you make are **greatly appreciated**.
 
 Dario - dariogomez1011@gmail.com
 
-Project Link: [https://github.com/your_username_/ReactPoster](https://github.com/dariolggomez/ReactPoster)
+Project Link: [https://github.com/dariolggomez/React-Poster](https://github.com/dariolggomez/React-Poster)
