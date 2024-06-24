@@ -15,7 +15,7 @@ function NewPost() {
         <Form method='post' className={classes.form}>
           <p>
             <label htmlFor="body">Text</label>
-            <textarea id="body" name='body' required rows={3} />
+            <textarea spellCheck="false" id="body" name='body' required rows={3} />
           </p>
           <p>
             <label htmlFor="name">Your name</label>
