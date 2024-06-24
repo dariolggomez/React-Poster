@@ -19,6 +19,13 @@ function NewPost({onHideModal, onSubmitPost}) {
       body: event.target.body.value,
       name: event.target.name.value,
     }
+    fetch('http://localhost:8080/posts', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     onSubmitPost(formData);
     onHideModal();
   }
