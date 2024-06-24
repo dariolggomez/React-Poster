@@ -5,7 +5,7 @@
 
 ## Overview
 
-React Poster is a web application designed for users to effortlessly create and share posts. Built with the powerful React framework, this project leverages modern web technologies to provide a seamless and interactive user experience.
+React Poster is a web demo application designed to create and share posts. Built with the powerful React framework, this project leverages modern web technologies to provide a seamless and interactive user experience.
 
 ## Features
 
@@ -14,7 +14,7 @@ React Poster is a web application designed for users to effortlessly create and 
 
 ## Technologies Used
 
-- **React**: Utilizes the latest React features for efficient UI development, including hooks and the context API for state management.
+- **React**: Utilizes the latest React features for efficient UI development.
 - **CSS Modules**: Employs CSS Modules for component-scoped styling, ensuring that styles are consistent and do not clash across the application.
 - **React Router**: Implements React Router for seamless navigation within the application without full page reloads.
 
