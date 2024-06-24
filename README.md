@@ -4,7 +4,7 @@
 
 ## Overview
 
-React Poster is a web demo application designed to create and share posts. Built with the powerful React framework, this project leverages modern web technologies to provide a seamless and interactive user experience.
+React Poster is a web demo application designed to create and share posts. Built with the powerful React framework.
 
 ## Features
 
