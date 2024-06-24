@@ -4,7 +4,7 @@ import classes from "./PostsList.module.css";
 import Modal from "./Modal";
 import { useState } from "react";
 
-function PostsList({hideModalHandler, renderModal}) {
+function PostsList({ hideModalHandler, renderModal }) {
   const [posts, setPosts] = useState([]);
 
   function addPostHandler(postData) {
@@ -16,16 +16,21 @@ function PostsList({hideModalHandler, renderModal}) {
   return (
     <>
       {
-        renderModal && 
+        renderModal &&
         <Modal onHideModal={hideModalHandler} >
           <NewPost onSubmitPost={addPostHandler} onHideModal={hideModalHandler} />
         </Modal>
       }
-      <ul className={classes.posts}>
+      {posts.length > 0 && <ul className={classes.posts}>
         {posts.map((post) => (
           <Post key={post.body} author={post.name} body={post.body} />
         ))}
-      </ul>
+      </ul>}
+      {posts.length === 0 &&
+        <div style={{ textAlign: 'center', color: 'white' }}>
+          <h2>There are no posts yet.</h2>
+          <p>Start adding some!</p>
+        </div>}
     </>
   );
 }
