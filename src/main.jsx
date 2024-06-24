@@ -5,8 +5,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NewPost from './routes/NewPost'
 import RootLayout from './routes/RootLayout'
 import PostsLayout from './routes/PostsLayout'
-import { loader as fetchPosts } from './utils/api_functions'
-import { action as createPost } from './utils/api_functions'
+import { fetchPosts as fetchPosts } from './utils/api_functions'
+import { sendPost as createPost } from './utils/api_functions'
+import PostDetails from './routes/PostDetails'
+import { openPostDetails as postDetailsLoader } from './utils/api_functions'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,8 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/create-post', element: <NewPost />, action: createPost
-          }
+          },
+          {path: '/:id', element: <PostDetails />, loader: postDetailsLoader}
         ]
       },
     ],
