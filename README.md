@@ -1,5 +1,8 @@
 # React Poster
 
+![](/src/assets/photo_posts.png)  
+![](/src/assets/photo_form.png)
+
 ## Overview
 
 React Poster is a web application designed for users to effortlessly create and share posts. Built with the powerful React framework, this project leverages modern web technologies to provide a seamless and interactive user experience.
