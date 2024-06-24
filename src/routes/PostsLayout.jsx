@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import PostsList from "../components/PostsList";
 
-function Posts() {
+function PostsLayout() {
   return (
     <>
       <Outlet />
@@ -12,4 +12,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default PostsLayout;
