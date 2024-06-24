@@ -18,7 +18,6 @@ function Modal({children}) {
 }
 
 Modal.propTypes = {
-    onHideModal: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
 };
 
